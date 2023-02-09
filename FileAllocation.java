@@ -1,3 +1,8 @@
+/**
+ * Author: Ubunzu
+ * Date: November 4, 2022
+ * Description: A simple Java program to present File Allocation in OS subject
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
