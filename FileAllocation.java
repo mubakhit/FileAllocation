@@ -1,3 +1,4 @@
+
 /**
  * Author: Ubunzu
  * Date: November 4, 2022
@@ -8,8 +9,12 @@ import java.util.Scanner;
 
 public class FileAllocation {
 
-    // HadrDisk Array size 12
-    static Object HadrDisk[] = new Object[12];
+    /*
+     * HadrDisk Array
+     * You can change HardDisk Length here
+     * Default 12
+     */
+    static Object HardDisk[] = new Object[12];
 
     // method return true if index is empty otherwise false
     public static boolean checker(int start, int length) {
@@ -17,7 +22,7 @@ public class FileAllocation {
         int i = start;
         while (i <= start + length - 1) {
 
-            if (HadrDisk[i] == null) {
+            if (HardDisk[i] == null) {
                 i++;
                 return true;
             } else {
@@ -32,13 +37,11 @@ public class FileAllocation {
     // the most impotant method that locate the index with its own index number
     static void fuckalltogether(String Name, int length, int start) {
 
-        // for (int i = 0; i <= HadrDisk.length; i++) {
-
         if (checker(start, length)) {
 
             int j = start;
             while (j <= start + length - 1) {
-                HadrDisk[j] = j;
+                HardDisk[j] = j;
                 j++;
 
             }
@@ -57,7 +60,7 @@ public class FileAllocation {
         System.out.println("]");
     }
 
-    // method to all the information about files
+    // method to print all the information about files
     static void printMotherFucker(String Name, int length, int start) {
 
         System.out.println("***********************");
@@ -94,7 +97,7 @@ public class FileAllocation {
         }
         System.out.println("***********************");
         System.out.println("Hard Disk in Final Form: ");
-        System.out.println(Arrays.toString(HadrDisk));
+        System.out.println(Arrays.toString(HardDisk));
 
         scan.close();
 
